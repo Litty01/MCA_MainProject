@@ -1,0 +1,135 @@
+// ignore_for_file: use_super_parameters, prefer_const_constructors
+
+import 'package:flutter/material.dart';
+
+class MyVoljob extends StatefulWidget {
+  const MyVoljob({Key? key}) : super(key: key);
+
+  @override
+  // ignore: library_private_types_in_public_api
+  _MyVoljobState createState() => _MyVoljobState();
+}
+
+class _MyVoljobState extends State<MyVoljob> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage('assets/voljob.jpg'), fit: BoxFit.cover),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        body: Stack(
+          children: [
+            Container(
+              padding: EdgeInsets.only(left: 35, top: 30),
+              child: Text(
+                'Be An Emergency Service Provider',
+                style: TextStyle(color: Color.fromARGB(255, 21, 18, 18), fontSize: 35),
+              ),
+            ),
+            SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.28),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 35, right: 35),
+                      child: Column(
+                        children: [
+                          TextField(
+                            style: TextStyle(color: Colors.white),
+                            decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                hintText: "Service Category",
+                                hintStyle: TextStyle(color: Colors.white),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                )),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                           TextField(
+                            style: TextStyle(color: Colors.white),
+                            decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                hintText: "Phone Number",
+                                hintStyle: TextStyle(color: Colors.white),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                )),
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Register',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(242, 246, 247, 0.771),
+                                    fontSize: 27,
+                                    fontWeight: FontWeight.w700),
+                              ),
+                              CircleAvatar(
+                                radius: 30,
+                                backgroundColor: Color(0xff4c505b),
+                                child: IconButton(
+                                    color: Colors.white,
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.arrow_forward,
+                                    )),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 40,
+                          ),
+                        
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
